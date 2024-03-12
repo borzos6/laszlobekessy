@@ -3,7 +3,7 @@ terraform {
     encrypt = true
     region  = "eu-central-1"
     bucket  = "laszlobekessy-terraform-state"
-    key     = "production-terraform.tfstate"
+    key     = "aws-common/aws-common.tfstate"
   }
 
   required_providers {
