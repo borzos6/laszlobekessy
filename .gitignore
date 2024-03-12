@@ -5,6 +5,9 @@ dist
 tmp
 /out-tsc
 
+# nx cache
+.nx/
+
 # dependencies
 node_modules
 
@@ -38,4 +41,27 @@ testem.log
 .DS_Store
 Thumbs.db
 
-.nx/cache
+# Env
+.env
+.env.*
+!.env.example
+
+# Terraform
+.terraform
+tf.out
+crash.log
+
+# Encryption
+**/pgp/*
+!**/pgp/decrypt-secrets.sh
+!**/pgp/key-gen-template
+*.gpg
+
+# Google credentials
+google-credentials*.json
+google-token*.json
+
+# Serverless
+.serverless
+.webpack
+.esbuild
