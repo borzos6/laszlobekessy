@@ -14,6 +14,7 @@ module "codeberryschool_com_production" {
   desired_urls = [
     "codeberryschool.com",
     "www.codeberryschool.com",
+    "hu.codeberryschool.com",
     "orange.codeberryschool.com",
     "central.codeberryschool.com",
     "data-mining.codeberryschool.com",
