@@ -4,6 +4,8 @@ import {
   PutItemInput,
   ScanCommand,
   ScanInput,
+  UpdateItemCommand,
+  UpdateItemInput,
 } from '@aws-sdk/client-dynamodb';
 import { DynamoDBConnectorConfig } from './dynamodb-connector.d';
 
@@ -58,6 +60,35 @@ class DynamoDBConnector {
         {}) as object;
     } catch (error) {
       console.error('Error retrieving items:', error);
+      throw error;
+    }
+  }
+
+  /**
+   * Update an item in the DB by a given key
+   */
+  public async updateItemByKey(
+    key: string,
+    value: string,
+    updateExpression: string,
+    expressionAttributeValues: object,
+    expressionAttributeNames: object
+  ) {
+    // Build the command object
+    const updateItemCommand = new UpdateItemCommand({
+      TableName: this.config.tableName,
+      Key: {
+        [key]: { S: value },
+      },
+      UpdateExpression: updateExpression,
+      ExpressionAttributeValues: expressionAttributeValues,
+      ExpressionAttributeNames: expressionAttributeNames,
+    } as UpdateItemInput);
+
+    try {
+      return await this.db.send(updateItemCommand);
+    } catch (error) {
+      console.error('Error updating item:', error);
       throw error;
     }
   }
