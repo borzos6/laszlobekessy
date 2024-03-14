@@ -1,0 +1,15 @@
+# Local files
+.DS_Store
+.vscode/*
+
+# Cache
+.cache
+
+# Library
+node_modules
+package.json
+package-lock.json
+
+# Build 
+/public
+

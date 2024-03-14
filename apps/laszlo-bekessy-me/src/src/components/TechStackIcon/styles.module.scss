@@ -1,0 +1,41 @@
+@import '../../styles/variables';
+
+.icon-wrap {
+    height: 5vw;
+    width: 5vw;
+    border-radius: 50%;
+    border: .5px solid $gray-30p;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease;
+    margin-left: .2vw;
+    margin-right: .2vw;
+    background-color: #fff;
+    
+    &:hover {
+        box-shadow: 0 0.5em 1em -0.125em $gray-30p, 0 0px 0 1px $gray-10p;
+        transform: translate(0%, -5%);
+    }
+}
+
+.icon {
+    font-size: 3.2vw;
+}
+
+.description {
+    font-size: 1vw;
+}
+
+@media screen and (max-width: 600px) {
+    .icon-wrap {
+        height: 10vw;
+        width: 10vw;
+    }
+    .icon {
+        font-size: 7vw;
+    }
+    .description {
+        font-size: 2.5vw;
+    }
+}

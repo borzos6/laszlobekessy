@@ -1,0 +1,34 @@
+@import '../../styles/variables';
+
+.divider {
+  padding: 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5vh;
+  
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    height: 0.09em;
+    min-width: 30vw;
+  }
+  
+  &::before {
+    background: linear-gradient(to right, rgba(240,240,240,0), $gray);
+  }
+  
+  &::after {
+    background: linear-gradient(to left, rgba(240,240,240,0), $gray);
+  }
+}
+
+.with-text {
+    &::before {
+      margin-right: 4vw;
+    }
+    &::after {
+      margin-left: 4vw;
+    }
+}

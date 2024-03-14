@@ -1,0 +1,91 @@
+{
+    "strongestActualTechStack": [
+        { "devicon": "terraform-plain", "name": "TF" },
+        { "devicon": "kubernetes-plain", "name": "Kube" },
+        { "devicon": "amazonwebservices-plain-wordmark", "name": "AWS" },
+        { "devicon": "docker-plain", "name": "Docker" },
+        { "devicon": "mongodb-plain", "name": "Mongo" },
+        { "devicon": "nodejs-plain", "name": "Node.js" },
+        { "devicon": "typescript-plain", "name": "TS" },
+        { "devicon": "gatsby-plain", "name": "Gatsby" },
+        { "devicon": "react-plain", "name": "React" },
+        { "devicon": "bulma-plain", "name": "Bulma" },
+        { "devicon": "git-plain", "name": "Git" },
+        { "devicon": "vscode-plain", "name": "VSCode" }
+    ],
+    "steamAcademyTechStack": [
+        { "devicon": "terraform-plain", "name": "TF" },
+        { "devicon": "amazonwebservices-plain-wordmark", "name": "AWS" },
+        { "devicon": "raspberrypi-line", "name": "R Pi" },
+        { "devicon": "c-plain", "name": "C" },
+        { "devicon": "cplusplus-plain", "name": "C++" },
+        { "devicon": "python-plain", "name": "Python" },
+        { "devicon": "docker-plain", "name": "Docker" },
+        { "devicon": "react-plain", "name": "React" },
+        { "devicon": "git-plain", "name": "Git" },
+        { "devicon": "bash-plain", "name": "Bash" },
+        { "devicon": "vscode-plain", "name": "VSCode" }
+    ],
+    "codeberryTechStack": [
+        { "devicon": "terraform-plain", "name": "TF" },
+        { "devicon": "kubernetes-plain", "name": "Kube" },
+        { "devicon": "amazonwebservices-plain-wordmark", "name": "AWS" },
+        { "devicon": "docker-plain", "name": "Docker" },
+        { "devicon": "mongodb-plain", "name": "Mongo" },
+        { "devicon": "nodejs-plain", "name": "Node.js" },
+        { "devicon": "typescript-plain", "name": "TS" },
+        { "devicon": "nestjs-plain", "name": "Nest.js" },
+        { "devicon": "gatsby-plain", "name": "Gatsby" },
+        { "devicon": "react-plain", "name": "React" },
+        { "devicon": "bootstrap-plain", "name": "Bootstrap" },
+        { "devicon": "git-plain", "name": "Git" },
+        { "devicon": "vscode-plain", "name": "VSCode" }
+    ],
+    "yearCompassTechStack": [
+        { "devicon": "terraform-plain", "name": "TF" },
+        { "devicon": "amazonwebservices-plain-wordmark", "name": "AWS" },
+        { "devicon": "javascript-plain", "name": "JS" },
+        { "devicon": "gatsby-plain", "name": "Gatsby" },
+        { "devicon": "react-plain", "name": "React" },
+        { "devicon": "bootstrap-plain", "name": "Bootstrap" },
+        { "devicon": "facebook-plain", "name": "Facebook" },
+        { "devicon": "git-plain", "name": "Git" },
+        { "devicon": "vscode-plain", "name": "VSCode" },
+        { "devicon": "illustrator-plain", "name": "Illustrator" }
+    ],
+    "freelancingTechStack": [
+        { "devicon": "javascript-plain", "name": "JS" },
+        { "devicon": "nodejs-plain", "name": "Node.js" },
+        { "devicon": "vuejs-plain", "name": "Vue" },
+        { "devicon": "bulma-plain", "name": "Bulma" },
+        { "devicon": "css3-plain", "name": "CSS" },
+        { "devicon": "git-plain", "name": "Git" },
+        { "devicon": "vscode-plain", "name": "VSCode" }
+    ],
+    "abfTechStack": [
+        { "devicon": "linux-plain", "name": "Linux" },
+        { "devicon": "vagrant-plain", "name": "Vagrant" },
+        { "devicon": "bash-plain", "name": "Bash" },
+        { "devicon": "mysql-plain", "name": "Mysql" },
+        { "devicon": "php-plain", "name": "PHP" },
+        { "devicon": "laravel-plain", "name": "Laravel" },
+        { "devicon": "python-plain", "name": "Python" },
+        { "devicon": "django-plain", "name": "Django" },
+        { "devicon": "bootstrap-plain", "name": "Bootstrap" },
+        { "devicon": "jquery-plain", "name": "Jquery" },
+        { "devicon": "jira-plain", "name": "Jira" },
+        { "devicon": "git-plain", "name": "Git" },
+        { "devicon": "jetbrains-plain", "name": "Jetbrains" }
+    ],
+    "automotiveTechStack": [
+        { "devicon": "bash-plain", "name": "Bash" },
+        { "devicon": "c-plain", "name": "C" },
+        { "devicon": "embeddedc-plain", "name": "Emb. C" },
+        { "devicon": "cplusplus-plain", "name": "C++" },
+        { "devicon": "python-plain", "name": "Python" },
+        { "devicon": "java-plain", "name": "Java" },
+        { "devicon": "matlab-plain", "name": "Matlab" },
+        { "devicon": "labview-plain", "name": "Labview" },
+        { "devicon": "subversion-plain", "name": "SVN" }
+    ]
+}

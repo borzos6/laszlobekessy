@@ -1,0 +1,55 @@
+{
+  "name": "@laszlobekessy/laszlo.bekessy.me",
+  "version": "2.1.0",
+  "private": true,
+  "description": "Intro, contact, and portfolio page for László Békéssy @borzos6",
+  "author": "László Békéssy @borzos6",
+  "keywords": [
+    "gatsby",
+    "bulma",
+    "react",
+    "sass",
+    "fontawesome",
+    "devicon",
+    "aws"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/borzos6/laszlobekessy"
+  },
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "lint": "eslint ./src/**/*.jsx ./src/**/*.js"
+  },
+  "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@mediacurrent/gatsby-plugin-silence-css-order-warning": "^1.0.0",
+    "devicon": "^2.16.0",
+    "gatsby": "^5.13.3",
+    "gatsby-plugin-google-gtag": "^5.13.1",
+    "gatsby-plugin-manifest": "^5.13.1",
+    "gatsby-plugin-offline": "^6.13.1",
+    "gatsby-plugin-robots-txt": "^1.8.0",
+    "gatsby-plugin-sass": "^6.13.1",
+    "gatsby-plugin-sitemap": "^6.13.1",
+    "gatsby-source-filesystem": "^5.13.1",
+    "gatsby-transformer-json": "^5.13.1",
+    "react": "^18.2.0",
+    "react-bulma-components": "^4.1.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.72.0"
+  },
+  "devDependencies": {
+    "prettier": "3.2.5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
