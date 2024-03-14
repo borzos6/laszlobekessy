@@ -1,0 +1,31 @@
+@import '../../styles/variables';
+
+.footer {
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: all 1s ease;
+    
+    &:hover {
+        box-shadow: 0 0.5em 1em -0.125em $gray-30p, 0 0px 0 1px $gray-10p;
+        transform: translate(0%, -5%);
+
+        .avatar {
+            opacity: 1;
+        }
+    }
+}
+
+.header {
+    justify-content: center;
+}
+
+.avatar {
+    opacity: .8;
+    transition: all 1s ease;
+}

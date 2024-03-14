@@ -14,7 +14,14 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@laszlobekessy/dynamodb-connector": [
+        "packages/dynamodb-connector/src/index.ts"
+      ],
+      "@laszlobekessy/secrets-manager-connector": [
+        "packages/secrets-manager-connector/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

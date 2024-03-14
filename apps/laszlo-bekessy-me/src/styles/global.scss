@@ -1,0 +1,50 @@
+// Variables
+@import './variables';
+
+// Devicons
+@import 'devicon/devicon.min.css';
+
+// Bulma
+@import "bulma/bulma.sass";
+
+// Fontawesome (need to be loaded here to prevent huge icons on pageload)
+@import '@fortawesome/fontawesome-svg-core/styles';
+
+// Bulma Overrides
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.box {
+  height: 100%;
+}
+
+// Global styles
+@font-face {
+  font-family: 'Nexa';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/nexa-light.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Nexa';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts/nexa-bold.woff2) format('woff2');
+}
+
+html, body {
+    font-family: $font-family-base;
+}
+
+.bg-gray-5p {
+  background-color: $gray-5p;
+}
+
+.gray {
+  color: $gray;
+}

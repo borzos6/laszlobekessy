@@ -1,0 +1,48 @@
+name: 'laszlo.bekessy.me / PRODUCTION deployment'
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'apps/laszlo-bekessy-me/**'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js v18
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Build
+        working-directory: apps/laszlo-bekessy-me
+        run: |
+          npm ci
+          npx nx run @laszlobekessy/laszlo-bekessy-me:build
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_DEPLOY_WEBSITE_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_DEPLOY_WEBSITE_KEY_SECRET }}
+          aws-region: ${{ secrets.AWS_DEPLOY_WEBSITE_REGION }}
+
+      - name: Deploy artifacts to S3
+        working-directory: apps/laszlo-bekessy-me/public
+        run: aws s3 sync ./ s3://laszlo.bekessy.me/ --delete
+
+      - name: Invalidate CloudFront cache (Error tolerant)
+        uses: chetan/invalidate-cloudfront-action@v2
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_DEPLOY_WEBSITE_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_DEPLOY_WEBSITE_KEY_SECRET }}
+          AWS_REGION: ${{ secrets.AWS_DEPLOY_WEBSITE_REGION }}
+          DISTRIBUTION: ${{ secrets.AWS_LASZLO_BEKESSY_ME_CLOUDFRONT_DISTRIBUTION }}
+          PATHS: '/*'
+        continue-on-error: true

@@ -1,0 +1,42 @@
+{
+  "name": "@laszlobekessy/laszlo-bekessy-me",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "options": {
+        "cwd": "apps/laszlo-bekessy-me",
+        "command": "gatsby build"
+      },
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": [
+        "production",
+        "^production",
+        {
+          "externalDependencies": ["gatsby"]
+        }
+      ],
+      "outputs": ["{workspaceRoot}/dist/apps/laszlo-bekessy-me"],
+      "executor": "nx:run-commands",
+      "configurations": {}
+    },
+    "develop": {
+      "options": {
+        "cwd": "apps/laszlo-bekessy-me",
+        "command": "gatsby develop"
+      },
+      "cache": false,
+      "inputs": [
+        {
+          "externalDependencies": ["gatsby"]
+        }
+      ],
+      "executor": "nx:run-commands",
+      "configurations": {}
+    }
+  },
+  "sourceRoot": "apps/laszlo-bekessy-me",
+  "tags": [],
+  "implicitDependencies": []
+}

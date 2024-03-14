@@ -1,0 +1,12 @@
+@import '../../styles/variables';
+
+.box {
+    box-shadow: none;
+    transition: all 1s ease;
+    padding: 1.5vw;
+    
+    &:hover {
+        box-shadow: 0 0.5em 1em -0.125em $gray-30p, 0 0px 0 1px $gray-10p;
+        transform: translate(0%, -5%);
+    }
+}
