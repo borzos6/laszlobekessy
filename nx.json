@@ -8,13 +8,26 @@
       "!{projectRoot}/jest.config.[jt]s",
       "!{projectRoot}/.eslintrc.json"
     ],
-    "sharedGlobals": []
+    "sharedGlobals": [],
+    "stage": [
+      {
+        "env": "STAGE"
+      }
+    ],
+    "no-sls": ["!{projectRoot}/serverless.yml", "!{projectRoot}/**/sls.yml"]
   },
   "tasksRunnerOptions": {
     "default": {
       "runner": "nx/tasks-runners/default",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e",
+          "package",
+          "deploy"
+        ]
       }
     }
   },

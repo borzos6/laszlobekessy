@@ -16,7 +16,7 @@
     "@nx/esbuild": "^17.2.8",
     "@nx/eslint-plugin": "16.8.0",
     "@nx/express": "^16.8.0",
-    "@nx/jest": "v17.2.5",
+    "@nx/jest": "18.0.3",
     "@nx/js": "18.0.8",
     "@nx/linter": "16.8.0",
     "@nx/node": "16.8.0",
