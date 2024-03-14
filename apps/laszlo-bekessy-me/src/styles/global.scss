@@ -5,7 +5,7 @@
 @import 'devicon/devicon.min.css';
 
 // Bulma
-@import "bulma/bulma.sass";
+@import 'bulma/bulma.sass';
 
 // Fontawesome (need to be loaded here to prevent huge icons on pageload)
 @import '@fortawesome/fontawesome-svg-core/styles';
@@ -37,8 +37,9 @@
   src: url(/fonts/nexa-bold.woff2) format('woff2');
 }
 
-html, body {
-    font-family: $font-family-base;
+html,
+body {
+  font-family: $font-family-base;
 }
 
 .bg-gray-5p {
