@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'apps/laszlo-bekessy-me/**'
+      - '.github/workflows/laszlo-bekessy-me**'
 
 jobs:
   deploy:
@@ -30,10 +31,7 @@ jobs:
         run: npm ci
 
       - name: Build application
-        working-directory: apps/laszlo-bekessy-me
-        run: |
-          npm ci
-          npx nx run @laszlobekessy/laszlo-bekessy-me:build
+        run: npx nx run @laszlobekessy/laszlo-bekessy-me:build
 
       - name: Deploy artifacts to S3
         working-directory: apps/laszlo-bekessy-me/public
