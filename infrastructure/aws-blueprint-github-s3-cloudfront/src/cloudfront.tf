@@ -4,7 +4,7 @@ resource "aws_cloudfront_distribution" "cloudfront_distribution" {
   enabled  = true
 
   origin {
-    domain_name = "${aws_s3_bucket.site_bucket.bucket}.s3-website-${aws_s3_bucket.site_bucket.region}.amazonaws.com"
+    domain_name = "${aws_s3_bucket.site_bucket.bucket}.s3-website.${aws_s3_bucket.site_bucket.region}.amazonaws.com"
     origin_id   = "S3-${aws_s3_bucket.site_bucket.bucket}"
 
     custom_origin_config {

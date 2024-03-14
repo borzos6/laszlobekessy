@@ -2,7 +2,7 @@ resource "aws_route53_record" "a_record" {
   for_each = toset(var.desired_urls)
 
   provider = aws.us_east_1
-  name     = "${each.key}.${data.aws_route53_zone.zone.name}"
+  name     = each.key == data.aws_route53_zone.zone.name ? data.aws_route53_zone.zone.name : "${join(".", slice(split(".", each.key), 0, length(split(".", each.key)) - 2))}.${data.aws_route53_zone.zone.name}"
   type     = "A"
   zone_id  = data.aws_route53_zone.zone.zone_id
 
