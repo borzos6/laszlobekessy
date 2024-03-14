@@ -2,11 +2,13 @@
 
 # compiled output
 dist
+public/
 tmp
 /out-tsc
 
-# nx cache
+# Cache
 .nx/
+.cache/
 
 # dependencies
 node_modules
