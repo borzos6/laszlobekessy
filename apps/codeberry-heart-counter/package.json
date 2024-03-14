@@ -1,0 +1,14 @@
+{
+  "name": "@laszlobekessy/codeberry-heart-counter",
+  "version": "0.1.0",
+  "description": "CodeBerry Heart Counter lambda application",
+  "main": "./src/handlers/app.js",
+  "typings": "./src/handlers/app.d.ts",
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.72"
+  },
+  "type": "commonjs"
+}

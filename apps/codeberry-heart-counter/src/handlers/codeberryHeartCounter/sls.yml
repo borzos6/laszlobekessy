@@ -1,0 +1,13 @@
+functions:
+  codeberryHeartCounterGetCount:
+    handler: src/handlers/codeberryHeartCounter/app.getCount
+    events:
+      - http:
+          method: GET
+          path: /get-count
+  codeberryHeartCounterAddOne:
+    handler: src/handlers/codeberryHeartCounter/app.addOne
+    events:
+      - http:
+          method: GET
+          path: /add-one
