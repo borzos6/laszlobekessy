@@ -30,7 +30,7 @@ resource "aws_route53_record" "codeberryschool_com_soa_record" {
   type     = "SOA"
   ttl      = 900
   zone_id  = aws_route53_zone.codeberryschool_com_zone.zone_id
-  records  = ["${aws_route53_zone.codeberryschool_com_zone.name_servers[3]}. awsdns-hostmaster.amazon.com. 1 7200 900 1209600 86400"]
+  records  = ["${aws_route53_zone.codeberryschool_com_zone.name_servers[0]}. awsdns-hostmaster.amazon.com. 1 7200 900 1209600 86400"]
 }
 
 resource "aws_route53_record" "codeberryschool_com_caa_record" {
