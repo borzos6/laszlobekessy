@@ -20,18 +20,21 @@ jobs:
         with:
           node-version: 18
 
-      - name: Build
-        working-directory: apps/laszlo-bekessy-me
-        run: |
-          npm ci
-          npx nx run @laszlobekessy/laszlo-bekessy-me:build
-
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-access-key-id: ${{ secrets.AWS_DEPLOY_WEBSITE_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_DEPLOY_WEBSITE_KEY_SECRET }}
           aws-region: ${{ secrets.AWS_DEPLOY_WEBSITE_REGION }}
+
+      - name: Install monorepo dependencies
+        run: npm ci
+
+      - name: Build application
+        working-directory: apps/laszlo-bekessy-me
+        run: |
+          npm ci
+          npx nx run @laszlobekessy/laszlo-bekessy-me:build
 
       - name: Deploy artifacts to S3
         working-directory: apps/laszlo-bekessy-me/public
