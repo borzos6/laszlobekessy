@@ -1,80 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Saying Goodbye!</title>
-    <style>
-      body {
-        background-color: #1ec997;
-        color: white;
-        font-family: Arial, sans-serif;
-        text-align: center;
-        margin: 0;
-        padding: 20px;
-      }
-      button {
-        background-color: #ffffff;
-        color: #1ec997;
-        border: none;
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
-        border-radius: 5px;
-      }
-      button:disabled {
-        opacity: 0.5;
-        cursor: not-allowed;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Saying Goodbye!</h1>
-    <p>We regret to inform you that the company is closing.</p>
-    <p>Thank you for your support.</p>
-    <p><span id="heartCount">0</span> <span>&#x2764;&#xFE0F;</span></p>
-    <button id="heartButton" onclick="sendRequest()">Send Heart</button>
-
-    <script>
-      async function sendRequest() {
-        var button = document.getElementById('heartButton');
-        button.disabled = true;
-
-        try {
-          const response = await fetch(
-            'https://kwmkfhgmaa.execute-api.us-east-1.amazonaws.com/production/add-one'
-          );
-          if (!response.ok) {
-            throw new Error('Network response was not ok');
-          }
-
-          const data = await response.json();
-          document.getElementById('heartCount').textContent = data.heartCount;
-        } catch (error) {
-          console.error('Error:', error);
-        } finally {
-          button.disabled = false;
-        }
-      }
-
-      // Initial request to get heart count
-      async function getHeartCount() {
-        try {
-          const response = await fetch(
-            'https://kwmkfhgmaa.execute-api.us-east-1.amazonaws.com/production/get-count'
-          );
-          if (!response.ok) {
-            throw new Error('Network response was not ok');
-          }
-
-          const data = await response.json();
-          document.getElementById('heartCount').textContent = data.heartCount;
-        } catch (error) {
-          console.error('Error:', error);
-        }
-      }
-
-      getHeartCount();
-    </script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeBerry</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="logo.png" alt="CodeBerry Logo" class="logo">
+            <hr class="separator">
+        </header>
+        <main>
+            <div class="messages">
+                <div class="message main-language">
+                    <p class="language-flag">🇬🇧</p>
+                    <p class="lead">CodeBerry was our dream to make computer science education approachable, exciting, and available to everyone.</p>
+                    <p>Between 2016 and 2024, we helped 200,000 students from 43 countries, speaking 30 languages, take their first steps in the transformative world of programming. We are especially proud of the 15,000 who took a deeper dive, exploring the superpowers of coding with our guidance.</p>
+                    <p>Unfortunately, not all worthwhile endeavours guarantee financial success as well. Despite our best efforts, we couldn't turn CodeBerry into a sustainable business, it was time to say goodbye. Our servers may have gone dark, we hope our passion for coding created sparks in the hearts of our alumni that will continue to light the way for many.</p>
+                    <p>CodeBerry was made possible by the dedication of our 350 team members, the curiosity and trust of our students, and the support from our investors, mentors, friends, and families. A heartfelt thank you goes to each one of you for making this adventure memorable.</p>
+                </div>
+                <div class="message secondary-language">
+                    <p class="language-flag">🇭🇺</p>
+                    <p class="lead">Azért építettük a CodeBerry-t, hogy a programozástanulás izgalmas világát mindenki számára elérhetővé tegyük.</p>
+                    <p>2016. és 2024. között a világ 43 országából érkező 200 000 tanulónak segítettünk megtenni az első lépéseket, és különösen büszkék vagyunk arra a 15 000 diákunkra, akik elköteleződtek amellett, hogy mélyebben is megismerkednek a kódolással, ezzel a transzformatív szuperképességgel.</p>
+                    <p>Azonban az, hogy valaminek önmagában értelme, értéke van, még egyáltalán nem garantálja, hogy üzleti szempontból is sikeres lesz. A legjobb tudásunk ellenére sem tudtuk a CodeBerry-t az évek során pénzügyi szempontból fenntartható vállalkozássá alakítani, így eljött az idő, hogy elbúcsúzzunk. Bár szervereink elnémultak, reméljük, hogy a programozás iránti szenvedélyünkkel sikerült sokakban olyan szikrákat gyújtanunk, amelyek még sokáig kitartanak.</p>
+                    <p>A CodeBerry nem jöhetett volna létre kollégáink elkötelezett munkája, diákjaink kíváncsisága és bizalma, befektetőink, mentoraink, barátaink és családunk támogatása nélkül. Mindannyiótoknak köszönjük, hogy lehetővé tettétek ezt az emlékezetes utazást.</p>
+                </div>
+            </div>
+            <hr class="separator">
+            <div class="heart-container">
+                <button id="heartButton" class="heart-button">
+                    ❤
+                </button>
+                <p><span id="heartCount"> </span></p>
+                <!-- 
+                  Congratulations! 🦊
+                  You've taken the first step towards uncovering the secrets hidden within. 
+                  Curiosity is a great superpower. We like you. 🤗
+                 -->
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
 </html>
