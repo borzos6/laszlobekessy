@@ -21,7 +21,7 @@ module "codeberryschool_com_production" {
     "stabill.codeberryschool.com",
     "payment.codeberryschool.com",
     "api.codeberryschool.com",
-    "design-system.codeberryschool.com",
+    "curriculum-assets.codeberryschool.com",
   ]
   zone_name              = "codeberryschool.com"
   acm_certificate_domain = "codeberryschool.com"
