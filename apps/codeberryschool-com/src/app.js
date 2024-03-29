@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     var heartButton = document.getElementById('heartButton');
-    const heartBackgroundColors = ['#FFE0E9', '#FFD6E8', '#FFC0CB', '#FFB3C2', '#FFA6BA'];
-    const heartColors = ['#E63946', '#DB2763', '#9D2B4B', '#D7263D', '#C71585'];
+    const heartBackgroundColors = ['#FFE0E9', '#FFD6E8', '#FFC0CB', '#FFB3C2', '#FFA6BA', '#FFDEDE', '#FFECDD', '#FFD7E6', '#FFCEDE', '#FFE2D0', '#E8B6C3', '#E8C4C4', '#9FBBC1', '#DCEBEB', '#C2DAD4'];
+    const heartColors = ['#E63946', '#DB2763', '#9D2B4B', '#D7263D', '#C71585', '#F76D6D', '#D82B2B', '#BB2B2B', '#F55151', '#E62B2B', '#5D2442', '#7F3943', '#806491', '#D36D88', '#B5355C'];
     let heartClicked = false;
 
     // Function to get a random color from an array
