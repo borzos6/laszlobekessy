@@ -1,23 +1,19 @@
 import React from 'react';
 
 export const onRenderBody = ({ setHeadComponents, setHtmlAttributes }) => {
-    setHeadComponents([
-        <link
-            rel="preload"
-            href="/fonts/nexa-bold.woff2"
-            as="font"
-            type="font/woff2"
-            crossOrigin="anonymous"
-            key="nexaBold"
-        />,
-        <link
-            rel="preload"
-            href="/fonts/nexa-light.woff2"
-            as="font"
-            type="font/woff2"
-            crossOrigin="anonymous"
-            key="nexaLight"
-        />,
-    ]);
-    setHtmlAttributes({ lang: 'en' });
+  setHeadComponents([
+    <link rel="preconnect" href="https://fonts.googleapis.com" key="googleFontsPreconnect" />,
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossOrigin="anonymous"
+      key="googleFontsGstaticPreconnect"
+    />,
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+      key="lexendFont"
+    />,
+  ]);
+  setHtmlAttributes({ lang: 'en' });
 };
