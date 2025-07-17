@@ -20,23 +20,26 @@
   height: 100%;
 }
 
+// Global styles
+@font-face {
+  font-family: 'Nexa';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/Nexa-Light.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Nexa';
+  font-style: bold;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts/Nexa-Bold.woff2) format('woff2');
+}
+
 html,
 body {
   font-family: $font-family-base;
-  font-weight: 200 !important;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 500 !important;
-}
-
-.has-text-weight-bold {
-  font-weight: 500 !important;
 }
 
 .bg-gray-5p {
