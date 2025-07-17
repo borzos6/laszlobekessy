@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@laszlobekessy/laszlo-bekessy-me": [
+        "apps/laszlo-bekessy-me/src/index.ts"
+      ],
       "@laszlobekessy/dynamodb-connector": [
         "packages/dynamodb-connector/src/index.ts"
       ],
